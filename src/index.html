@@ -1,27 +1,209 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
-  </head>
-  <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
-    </div>
-    <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
-  </body>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="./assets/styles/main.scss"
+        />
+        <!-- do not remove this line! -->
+        <title>UOC Boilerplate PEC1</title>
+    </head>
+    <body>
+        <div class="contenedor">
+            <div class="contenedor_Izquierdo">
+                <div class="imagen_curriculum">
+                    <img
+                        src="assets/images/paul-waelder.jpg"
+                        alt="Fotografía"
+                    />
+                </div>
+                <div class="bajoFoto">
+                    <div class="raya nombre_profesion">
+                        <div class="name">Rubén Sánchez</div>
+                        <div class="trabajo">Full Stack Engineer</div>
+                    </div>
+                    <div class="raya resume_profile">
+                        <div class="encabezados_curriculum_izquierdo">
+                            Curriculum
+                        </div>
+                        <div class="curriculum_texto">
+                            Alumno del Master en Desarrollo de Sitios y
+                            Aplicaciones web de la UOC.
+                        </div>
+                    </div>
+                    <div class="raya resume_address">
+                        <div class="encabezados_curriculum_izquierdo">
+                            Dirección
+                        </div>
+                        <div class="curriculum_texto">
+                            Calle Villa <br />
+                            33456 Asturias<br />
+                            España
+                        </div>
+                    </div>
+                    <div class="raya contacto">
+                        <div class="encabezados_curriculum_izquierdo">
+                            Contacto
+                        </div>
+                        <div class="curriculum_texto">
+                            <div class="subtitulos_izquierdo">Teléfono</div>
+                            <div>647 875 348</div>
+                        </div>
+                        <div class="curriculum_texto">
+                            <div class="subtitulos_izquierdo">Email</div>
+                            <div>pec1ruben@gmail.com</div>
+                        </div>
+                    </div>
+                    <div class="raya habilidades">
+                        <div class="encabezados_curriculum_izquierdo">
+                            Conocimientos
+                        </div>
+                        <div class="curriculum_texto">
+                            <div class="grafica_habilidades">
+                                <div class="texto_barras">SASS</div>
+                                <div class="barras">
+                                    <p>
+                                        <span style="width: 95%"></span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="grafica_habilidades">
+                                <div class="texto_barras">CSS</div>
+                                <div class="barras">
+                                    <p>
+                                        <span style="width: 90%"></span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="grafica_habilidades">
+                                <div class="texto_barras">HTML</div>
+                                <div class="barras">
+                                    <p>
+                                        <span style="width: 75%"></span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="grafica_habilidades">
+                                <div class="texto_barras">LARAVEL</div>
+                                <div class="barras">
+                                    <p>
+                                        <span style="width: 55%"></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contenedor_derecho">
+                <div class="raya nombre_profesion">
+                    <div class="nombre">Rubén Sánchez</div>
+                    <div class="trabajo">Full Stack Engineer</div>
+                </div>
+                <div class="raya resume_education">
+                    <div class="encabezados_curriculum_izquierdo">
+                        Educación
+                    </div>
+                    <div class="curriculum_texto">
+                        <div class="periodos_anuales">
+                            <div class="year">1990 - 2000</div>
+                            <div class="content">
+                                <p>Máster Universitario en Big Data</p>
+                                <p>
+                                    El temario corresponde al correspodiente a
+                                    los estudios de Máster.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="periodos_anuales">
+                            <div class="year">2005 - 2010</div>
+                            <div class="content">
+                                <p>Máster Universitario en Economía</p>
+                                <p>
+                                    El temario corresponde al correspodiente a
+                                    los estudios de Máster.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="periodos_anuales">
+                            <div class="year">2010 - 2014</div>
+                            <div class="content">
+                                <p>
+                                    Máster Universitario en Desarrollo de Sitios
+                                    y Aplicaciones Web
+                                </p>
+                                <p>
+                                    El temario corresponde al correspodiente a
+                                    los estudios de Máster.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="raya">
+                    <div class="encabezados_curriculum_izquierdo">
+                        Experiencia
+                    </div>
+                    <div class="curriculum_texto">
+                        <div class="periodos_anuales">
+                            <div class="year">2000 - 2001</div>
+                            <div class="content">
+                                <p>Ingeniero</p>
+                                <p>
+                                    He participado durante estos años en el
+                                    desarrollo de aplicaciones informaticas como
+                                    ingeniero de sistemas.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="periodos_anuales">
+                            <div class="year">2001- 2013</div>
+                            <div class="content">
+                                <p>Full Stack Engineer</p>
+                                <p>
+                                    He participado en la creación de varias
+                                    plataformas informáticas para Amazon.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="periodos_anuales">
+                            <div class="year">2013 - 2015</div>
+                            <div class="content">
+                                <p>Full Stack Engineer</p>
+                                <p>
+                                    He participado en la creación de varias
+                                    plataformas informáticas para Google.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="raya hobbies">
+                    <div class="encabezados_curriculum_izquierdo">
+                        aficiones
+                    </div>
+                    <div class="curriculum_texto">
+                        <div class="aficiones">
+                            <div>Natación</div>
+                        </div>
+                        <div class="aficiones">
+                            <div>Pilates</div>
+                        </div>
+                        <div class="aficiones">
+                            <div>Atletismo</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <include src="./views/footer.html"></include>
+
+        <script type="module" src="./assets/scripts/main.js"></script>
+        <!-- do not remove this line! -->
+    </body>
 </html>

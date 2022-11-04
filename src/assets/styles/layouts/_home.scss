@@ -1,57 +1,297 @@
+/*VARIABLES*/
+/*background*/
+$color_body_background: #fff;
+$color_background_CONTENEDOR: rgsb(228, 228, 228);
+$color_back_CV_CONTENEDOR_IZQUIERDO: #145961;
+$color_raya: #0c161c;
+
+/*color de fuente*/
+$encabezados_izquierdo: #fff;
+$encabezados_derecho: #26252d;
+$letra_contenedor_derecho_izquierdo: #64b8f4;
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
 * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  margin: 0;
-  padding: 2rem;
-  font-family: $font-family-sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  background-color: $uoc-bg;
-  color: $uoc-corporate;
-}
-
-.uoc-container {
-  max-width: 800px;
-  margin: auto;
-  padding: 2rem;
-  border-radius: 2rem;
-  text-align: center;
-  background-color: #fff;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
-}
-
-.uoc-logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5rem;
-  max-width: 200px;
-  height: auto;
-
-  @media (min-width: $mqMinWidth) {
-    max-width: none;
-  }
-}
-
-.uoc-title {
-  font-family: $font-family-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: $uoc-corporate;
-
-  @media (min-width: $mqMinWidth) {
-    font-size: 36px;
-  }
+  background: $color_body_background;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .uoc-footer {
   margin-top: 1.5rem;
   font-size: 0.75rem;
   text-align: center;
+}
+
+.contenedor {
+  display: flex;
+  width: 800px;
+  margin: 50px auto;
+  background: $color_background_CONTENEDOR;
+  padding: 10px;
+
+  .encabezados_curriculum_izquierdo {
+    color: $encabezados_izquierdo;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 10px;
+    letter-spacing: 4px;
+  }
+
+  .contenedor_Izquierdo {
+    width: 35%;
+    background: $color_back_CV_CONTENEDOR_IZQUIERDO;
+
+    .imagen_curriculum {
+      width: 100%;
+    }
+
+    .imagen_curriculum img {
+      width: 100%;
+      display: block;
+    }
+
+    .curriculum_texto {
+      color: $letra_contenedor_derecho_izquierdo;
+    }
+
+    .bajoFoto {
+      padding: 20px 30px;
+    }
+
+    .contenedor {
+      .raya {
+        padding: 20px 0;
+        border-bottom: 1px solid $color_raya;
+      }
+
+      & :last-child {
+        border-bottom: 0;
+      }
+    }
+
+    .nombre_profesion {
+      display: none;
+
+      .nombre {
+        font-size: 20px;
+        color: $encabezados_izquierdo;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 5px;
+        letter-spacing: 4px;
+      }
+
+      .trabajo {
+        color: $color_back_CV_CONTENEDOR_IZQUIERDO;
+      }
+
+      .contacto {
+        .subtitulos_izquierdo {
+          color: $encabezados_izquierdo;
+          margin-bottom: 2px;
+        }
+      }
+    }
+
+    .habilidades {
+      .grafica_habilidades {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5px;
+      }
+
+      .barras {
+        p {
+          position: relative;
+          width: 125px;
+          height: 20px;
+          background: $color_background_CONTENEDOR;
+        }
+      }
+    }
+  }
+
+  .contenedor_derecho {
+    width: 65%;
+    padding: 20px 40px;
+    color: #26252d;
+
+    .nombre_profesion {
+      .nombre {
+        color: $encabezados_derecho;
+        font-size: 32px;
+      }
+    }
+
+    .nombre_profesion {
+      .trabajo {
+        font-size: 14px;
+        text-transform: uppercase;
+      }
+    }
+
+    .raya {
+      .encabezados_curriculum_izquierdo {
+        color: $encabezados_derecho;
+      }
+    }
+
+    .periodos_anuales {
+      display: flex;
+
+      &:last-child .year:after {
+        display: none;
+      }
+
+      .content {
+        padding-left: 35px;
+        margin-bottom: 20px;
+        width: calc(100% - 115px);
+      }
+      .year {
+        padding-right: 35px;
+        width: 115px;
+        position: relative;
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: 17px;
+          right: 4px;
+          width: 3px;
+          height: 90%;
+          background: $color_raya;
+        }
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: 5px;
+          right: 0;
+          width: 10px;
+          height: 10px;
+          background: $color_background_CONTENEDOR;
+          border: 1px solid $encabezados_derecho;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    .hobbies {
+      .curriculum_texto {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+      }
+
+      .aficiones {
+        .int_icon {
+          font-size: 38px;
+          color: $color_raya;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+.contenedor {
+  .contenedor_Izquierdo {
+    .nombre_profesion {
+      .contenedor {
+        .contacto {
+          .curriculum_texto {
+            &:last-child {
+              margin-top: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.contenedor {
+  .contenedor_Izquierdo {
+    .habilidades {
+      .grafica_habilidades {
+        .barras {
+          p {
+            span {
+              position: absolute;
+              top: 0;
+              left: 0;
+              background: $color_raya;
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .contenedor {
+    width: 95%;
+    margin: 10px auto;
+    flex-direction: column;
+
+    .contenedor_derecho {
+      width: 100%;
+      .nombre_profesion {
+        display: none;
+      }
+    }
+  }
+  .contenedor {
+    .contenedor_Izquierdo {
+      width: 100%;
+      .nombre_profesion {
+        display: block;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .contenedor {
+    .contenedor_derecho {
+      padding: 20px 30px;
+    }
+    .periodos_anuales {
+      flex-direction: column;
+
+      .content {
+        width: 100%;
+        padding: 0;
+      }
+    }
+    .year {
+      padding: 0;
+      margin-bottom: 5px;
+      width: 100%;
+      color: $color_raya;
+
+      &:before {
+        display: none;
+      }
+
+      &:after {
+        display: none;
+      }
+    }
+  }
 }
